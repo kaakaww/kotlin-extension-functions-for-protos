@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package scan;
+
+message Alert {
+  string requestMethod = 1;
+  string url = 2;
+  string params = 3;
+}
+
+message Scan {
+  repeated Alert alerts = 2;
+}
