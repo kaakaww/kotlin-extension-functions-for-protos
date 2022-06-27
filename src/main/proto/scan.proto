@@ -10,6 +10,13 @@ message Alert {
   string params = 3;
 }
 
+message Error {
+  string message = 1;
+  string url = 2;
+}
+
 message Scan {
+  string id = 1;
   repeated Alert alerts = 2;
+  repeated Error errors = 3;
 }
